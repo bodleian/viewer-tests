@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/mirador/static/css/mirador-combined.css" />
+    <title>Document</title>
+</head>
+<body>
+<div id="viewer"></div>
+<!-- <div id="diva-wrapper2" style="width:40%; float: left;"></div> -->
+<script src="/mirador/static/mirador.min.js"></script>
+<script type="text/javascript">
+    myMiradorInstance = Mirador({
+        id: "viewer",
+        layout: "1x1",
+        buildPath: "../static/",
+        data: [
+            {
+                manifestUri: "https://iiif.bodleian.ox.ac.uk/iiif/manifest/798d6814-73c6-4d28-8665-70414d6d1e53.json",
+                location: "Bodleian Libraries"
+            }
+        ],
+        windowObjects: [
+            {
+                loadedManifest: "https://iiif.bodleian.ox.ac.uk/iiif/manifest/798d6814-73c6-4d28-8665-70414d6d1e53.json",
+                sidePanel: false
+            }
+        ]
+    })
+</script>
+</body>
+</html>

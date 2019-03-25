@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/uv/static/uv.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="/uv/static/lib/offline.js"></script>
+    <script type="text/javascript" src="/uv/static/helpers.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('uvLoaded', function(e) {
+            urlDataProvider = new UV.URLDataProvider(true);
+
+            uv = createUV('#uv', {
+                root: '../static',
+                iiifResourceUri: "https://iiif.bodleian.ox.ac.uk/iiif/manifest/819148d3-c292-4ba8-ab1f-52f696ee10fa.json",
+                configUri: "https://iiif.bodleian.ox.ac.uk/universalviewer/bodleian-config.json"
+            }, urlDataProvider);
+        }, false);
+    </script>
+
+    <div id="uv" class="uv"></div>
+
+    <script>
+
+        $(function() {
+
+            var $UV = $('#uv');
+
+            function resize() {
+                var windowWidth = window.innerWidth;
+                var windowHeight = window.innerHeight;
+                $UV.width(windowWidth);
+                $UV.height(windowHeight);
+            }
+
+            $(window).on('resize' ,function() {
+                resize();
+            });
+
+            resize();
+        });
+
+    </script>
+
+    <script src="/uv/static/uv.js"></script>
+</body>
+</html>
