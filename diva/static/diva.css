@@ -330,7 +330,7 @@
 .diva-modal {
   position: absolute;
   width: 32em;
-  max-height: 24em;
+  max-height: 26em;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -339,24 +339,6 @@
   transform: translate(-50%, -50%);
   z-index: 120;
   word-wrap: break-word; }
-
-#contentDiv {
-  overflow-y: auto;
-  max-height: 20em;
-  padding: 0em 0em 0em 2em; }
-
-#metadataTitle {
-  padding: 0.5em;
-  margin: 0;
-  text-align: center; }
-
-.close-button {
-  position: absolute;
-  right: 1em;
-  top: 1em; }
-
-.close-button:hover {
-  color: tomato; }
 
 .manipulation-fullscreen {
   width: 100% !important;
@@ -543,6 +525,30 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(253, 133, 243, 0.66); }
+
+#metadata-content {
+  overflow-y: auto;
+  max-height: 20em;
+  padding: 2em; }
+
+#metadata-content dl dt {
+  font-weight: bold; }
+
+#metadata-content dl dd {
+  margin-left: 0;
+  margin-bottom: 1em; }
+
+#metadata-title {
+  margin: 0;
+  text-align: center; }
+
+.close-button {
+  position: absolute;
+  right: 1em;
+  top: 1em; }
+
+.close-button:hover {
+  color: tomato; }
 
 
 /*# sourceMappingURL=diva.css.map*/
